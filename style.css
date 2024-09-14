@@ -586,3 +586,23 @@ button.filter-button:hover {
     opacity: 1;
     visibility: visible;
 }
+/* Add this CSS to center the button */
+.center-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.feature {
+    flex-basis: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+}
