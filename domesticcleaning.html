@@ -30,6 +30,7 @@
 
     <!-- script ================================================== -->
     <script src="js/modernizr.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href=
 "images/WhatsApp_Image_2024-08-02_at_20.08.50_ae4bad1d-removebg-preview.png"
           type="image/x-icon">
@@ -158,7 +159,45 @@
             </div>
         </div>
     </nav>
-
+    <a
+    href="https://wa.me/1234567890?text=Hello%20there!"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8 text-white" aria-hidden="true">
+      <path d="M12.04 1.988a10.02 10.02 0 00-10.02 10.02 9.973 9.973 0 001.667 5.494l-1.108 4.049 4.157-1.094a9.988 9.988 0 004.963 1.3c5.532 0 10.02-4.486 10.02-10.02 0-5.532-4.487-10.02-10.02-10.02zm4.86 14.546c-.22.615-1.241 1.129-1.693 1.18-.435.046-.773.214-2.578-.553-2.169-.894-3.531-3.13-3.639-3.273-.106-.146-.866-1.148-.866-2.186s.546-1.55.741-1.761c.195-.207.434-.26.579-.26h.415c.13 0 .314-.024.493.38.195.42.664 1.64.723 1.756.06.12.097.267.018.434-.08.168-.12.267-.237.414-.12.148-.257.327-.366.439-.122.13-.25.269-.108.53.145.261.647 1.074 1.39 1.737.956.855 1.763 1.12 2.027 1.244.262.121.41.106.568-.064.159-.17.686-.773.87-1.04.184-.267.36-.229.608-.137.247.09 1.565.742 1.833.877.267.137.445.207.512.323.062.12.062.697-.159 1.311z"/>
+    </svg>
+  </a>
+  
+  <style>
+    .whatsapp-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+  
+    .whatsapp-button:hover {
+      background-color: #128c7e;
+    }
+  
+    .whatsapp-button svg {
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+  </style>
+  
     <section id="hero" style="background-image:url(images/header.jpg); background-size: cover;">
         <div class="container padding-large">
             <div class="row">
@@ -435,10 +474,28 @@
         <iconify-icon icon="tabler:arrow-right" class="arrow-icon"></iconify-icon>
     </a>
     
-
-   
-
-   
+    <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+            <h1 class="text-3xl font-bold mb-4 text-center sm:text-left">Contact Us</h1>
+            <p class="text-base mb-4 text-gray-600">
+                Need to find out more about our services?
+            </p>
+            <p class="text-sm mb-6 text-gray-600">
+                We understand that each client has unique cleaning requirements, so we work closely with you to create a personalized cleaning plan that meets your specific needs and preferences.
+            </p>
+    
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <input type="hidden" name="access_key" value="5606518d-b1aa-4030-aac4-eca6ec84880d" />
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Enter Your Name" class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
+                    <input type="tel" name="phone" placeholder="+91 12345 67890" class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
+                </div>
+                <input type="email" name="email" placeholder="abc@example.com" class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
+                <textarea name="message" placeholder="Enter your Message" class="w-full h-32 px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                <button type="submit" class="w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Send</button>
+            </form>
+        </div>
+    </div>
 
     
 
