@@ -31,6 +31,21 @@
     <!-- script ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+   
+    document.getElementById("specialisedCleaningLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent navigation
+        var submenu = this.nextElementSibling;
+        // Toggle the visibility of the submenu
+        if (submenu.classList.contains('show')) {
+            submenu.classList.remove('show');
+        } else {
+            submenu.classList.add('show');
+        }
+    });
+</script>
+    
     <link rel="icon" href=
 "images/WhatsApp_Image_2024-08-02_at_20.08.50_ae4bad1d-removebg-preview.png"
           type="image/x-icon">
@@ -105,7 +120,7 @@
                                 <li><a class="dropdown-item" href="officecleaning.html">Office Cleaning</a></li>
                                 <li><a class="dropdown-item" href="deepcleaning.html">End of lease Cleaning</a></li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Specialised Cleaning</a>
+                                    <a class="dropdown-item dropdown-toggle" href="#" id="specialisedCleaningLink">Specialised Cleaning</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#about">Pressure Cleaning</a></li>
                                         <li><a class="dropdown-item" href="#glasscleaning">Glass Cleaning</a></li>
@@ -114,25 +129,30 @@
                                         <li><a class="dropdown-item" href="#tile">Tile and Grout Cleaning</a></li>
                                     </ul>
                                 </li>
+                                
                             </ul>
                         </li>
                         
                         <style>
-                        /* Styling the dropdown submenu */
-                        .dropdown-submenu {
-                            position: relative;
-                        }
-                        
-                        .dropdown-submenu .dropdown-menu {
-                            top: 0;
-                            left: 100%;
-                            margin-top: -5px;
-                            display: none;
-                        }
-                        
-                        .dropdown-submenu:hover .dropdown-menu {
-                            display: block;
-                        }
+                        /* Ensure the submenu is hidden by default */
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+}
+
+/* Show submenu when hovered (optional if you want hover functionality) */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Submenu style on click (from JavaScript toggle) */
+.dropdown-submenu .dropdown-menu.show {
+    display: block;
+}
+
                         </style>
                         
                         <!-- <li class="nav-item">
@@ -502,7 +522,7 @@
     </section>
 
 
-    <a href="booking.html" class="btn btn-primary mt-3 px-4 py-3 mx-2 center-btn">
+    <a href="contactform.html" class="btn btn-primary mt-3 px-4 py-3 mx-2 center-btn">
         Contact Us
         <iconify-icon icon="tabler:arrow-right" class="arrow-icon"></iconify-icon>
     </a>
